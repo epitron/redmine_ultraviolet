@@ -61,10 +61,11 @@ module UltravioletSyntaxPatch
 
       syntaxes = Uv.syntax_for_file(name, content)
 
-      # TODO: add line numbers
-      return "<pre>#{h content}</pre>" if syntaxes.empty?
-
-      syntax_name = syntaxes.first.first
+      if syntaxes.empty?
+        syntax_name = "plain_text"
+      else
+        syntax_name = syntaxes.first.first
+      end
 
       ## Usage: Uv.parse text, output = "xhtml", syntax_name = nil, line_numbers = false, render_style = "classic", headers = false
       return Uv.parse( content, "xhtml", syntax_name, true, @uv_theme_name )
