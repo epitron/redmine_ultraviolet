@@ -1,0 +1,18 @@
+<div class="autoscroll">
+  <table class="filecontent CodeRay">
+    <tbody>
+      <% line_num = 1 %>
+      <% syntax_highlight(filename, to_utf8(content)).each_line do |line| %>
+        <tr>
+          <th class="line-num" id="L<%= line_num %>"><a href="#L<%= line_num %>"><%= line_num %></a></th>
+          <td><pre class="<%= @uv_theme_name %>"><%= line %></pre></td>
+        </tr>
+        <% line_num += 1 %>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+<% content_for :header_tags do %>
+  <%= stylesheet_link_tag "uv_themes/#{@uv_theme_name}", :plugin => 'redmine_ultraviolet' %>
+<% end %>

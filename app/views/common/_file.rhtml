@@ -1,0 +1,20 @@
+<style>
+.uv-file pre {
+  font-size: 10pt;
+  margin: 0 0 0 0;
+  padding: none;
+}
+
+.uv-file {
+  overflow-x: auto; 
+  border: 4px solid black;
+}
+</style>
+
+<div class="uv-file">
+  <%= syntax_highlight(filename, to_utf8(content)) %>
+</div>
+
+<% content_for :header_tags do %>
+  <%= stylesheet_link_tag "uv_themes/#{@uv_theme_name}", :plugin => 'redmine_ultraviolet' %>
+<% end %>

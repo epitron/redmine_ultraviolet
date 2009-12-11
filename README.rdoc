@@ -1,0 +1,194 @@
+= redmine_ultraviolet
+
+A Redmine plugin that replaces the syntax highlighting engine (CodeRay)
+with a nicer one (Ultraviolet).
+
+Ultraviolet uses Textmate's syntax highlighting files, so it supports every
+language under the sun. And it has lots of themes!
+
+= Installation:
+
+Use Rails' handy-dandy plugin installer:
+
+  script/plugin install git://github.com/epitron/redmine_ultraviolet.git
+
+Or copy the +redmine_ultraviolet+ directory into +vendor/plugins/+
+
+= Themes:
+
+The highlighter's theme is currently hard-wired to use "pastels_on_dark":
+
+  http://ultraviolet.rubyforge.org/themes.xhtml#pastels_on_dark
+
+You can change it by modifying +DEFAULT_UV_THEME+ in +lib/ultraviolet_synax_patch.rb+.
+A configuration option is planned for a future release.
+
+= Supported Languages:
+
+  * ANTLR
+  * ASP
+  * ASP vb.NET
+  * ActionScript
+  * Active4D
+  * Active4D Config
+  * Active4D Library
+  * Ada
+  * Apache
+  * AppleScript
+  * BibTeX
+  * Blog — HTML
+  * Blog — Markdown
+  * Blog — Text
+  * Blog — Textile
+  * Bulletin Board
+  * C
+  * C#
+  * C++
+  * CM
+  * CSS
+  * CSS v3 beta
+  * CSV
+  * Cake
+  * ColdFusion
+  * Context Free
+  * D
+  * Diff
+  * DokuWiki
+  * Doxygen
+  * Dylan
+  * Eiffel
+  * Erlang
+  * F-Script
+  * FXScript
+  * Fortran
+  * GTD
+  * GTDalt
+  * Graphviz (DOT)
+  * Greasemonkey
+  * Gri
+  * Groovy
+  * HTML
+  * HTML (ASP)
+  * HTML (ASP.net)
+  * HTML (Active4D)
+  * HTML (Django)
+  * HTML (Mason)
+  * HTML (Rails)
+  * HTML (Tcl)
+  * Haml
+  * Haskell
+  * Inform
+  * Ini
+  * Installer Distribution Script
+  * Io
+  * JSON
+  * Java
+  * Java Properties
+  * JavaScript
+  * Javascript YUI
+  * LaTeX
+  * LaTeX Beamer
+  * LaTeX Log
+  * LaTeX Memoir
+  * Language Grammar
+  * Lex/Flex
+  * Lighttpd
+  * Lilypond
+  * Lisp
+  * Literate Haskell
+  * Logo
+  * Logtalk
+  * Lua
+  * MATLAB
+  * MEL
+  * MIPS Assembler
+  * MacPorts Portfile
+  * Mail
+  * Makefile
+  * Man
+  * Markdown
+  * Mediawiki
+  * Modula-3
+  * MoinMoin
+  * MooTools
+  * Movable Type
+  * MultiMarkdown
+  * NAnt Build File
+  * OCaml
+  * OCamllex
+  * OCamlyacc
+  * Objective-C
+  * Objective-C++
+  * OpenGL
+  * PHP
+  * Pascal
+  * Perl
+  * Plain Text
+  * PmWiki
+  * Postscript
+  * Processing
+  * Prolog
+  * Property List
+  * Prototype & Script.aculo.us (JavaScript)
+  * Prototype & Script.aculo.us (JavaScript) Bracketed
+  * Python
+  * Python (Django)
+  * Qt C++
+  * Quake Style .cfg
+  * R
+  * R Console
+  * Ragel
+  * Rd (R Documentation)
+  * Regular Expression
+  * Regular Expressions (Oniguruma)
+  * Regular Expressions (Python)
+  * Release Notes
+  * Remind
+  * Rez
+  * Ruby
+  * Ruby Experimental
+  * Ruby on Rails
+  * S5 Slide Show
+  * SQL
+  * SQL (Rails)
+  * SSH Config
+  * SWIG
+  * SWeave
+  * Scheme
+  * Scilab
+  * Setext
+  * Shell Script (Bash)
+  * Slate
+  * Smarty
+  * Standard ML
+  * Strings File
+  * TSV
+  * Tcl
+  * TeX
+  * TeX Math
+  * Template Toolkit
+  * Textile
+  * Twiki
+  * Txt2tags
+  * Vectorscript
+  * XHTML 1.0 Strict
+  * XML
+  * XML strict
+  * XSL
+  * YAML
+  * camlp4
+  * iCalendar
+  * jQuery (JavaScript)
+  * mod_perl
+  * qmake Project file
+  * reStructuredText
+
+
+= License:
+
+Copyright (c) 2009 Chris Gahan.
+
+Licensed under the WTFPL. See LICENSE for details.
+
+
+
