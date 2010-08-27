@@ -57,7 +57,14 @@ module UltravioletSyntaxPatch
       ## See: http://ultraviolet.rubyforge.org/svn/lib/uv.rb 
 
       ## See: http://ultraviolet.rubyforge.org/themes.xhtml
-      @uv_theme_name = DEFAULT_UV_THEME
+      
+	  @user = User.current
+      user_theme = @user.custom_value_for(CustomField.first(:conditions => {:name => 'Ultraviolet Theme'}))
+      if user_theme !=nil
+        @uv_theme_name = user_theme
+      else # An existing user hasn't selected a theme yet
+        @uv_theme_name = DEFAULT_UV_THEME
+      end
 
       syntaxes = Uv.syntax_for_file(name, content)
 

@@ -22,10 +22,13 @@ Alternatively, you can just copy the +redmine_ultraviolet+ directory into +vendo
 
 = Themes:
 
-The highlighter's theme is currently hard-wired to use "pastels_on_dark": http://ultraviolet.rubyforge.org/themes.xhtml#pastels_on_dark
+The highlighter's default theme is currently hard-wired to use "pastels_on_dark": http://ultraviolet.rubyforge.org/themes.xhtml#pastels_on_dark
 
 You can change it by modifying +DEFAULT_UV_THEME+ in +lib/ultraviolet_synax_patch.rb+.
-A configuration option is planned for a future release.
+
+Users can select which higlighting theme they want to use. A field called Ultraviolet Theme is available to users.
+The field has been prepopulated with currently available themes.
+
 
 = Supported Languages:
 
