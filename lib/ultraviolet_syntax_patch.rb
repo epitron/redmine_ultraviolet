@@ -5,6 +5,7 @@ DEFAULT_UV_THEME="pastels_on_dark"
 #
 # Monkeypatch Uv.syntax_for_file to handle blobs of content (without existing files)
 #
+
 module Uv
 
   def Uv.syntax_for_file file_name, content=nil
@@ -37,10 +38,10 @@ module Uv
   
 end
 
-
 #
 # UV Syntax highlighting
 #
+
 module UltravioletSyntaxPatch
 
   def self.included(base) # :nodoc:
@@ -58,6 +59,7 @@ module UltravioletSyntaxPatch
 
       ## See: http://ultraviolet.rubyforge.org/themes.xhtml
       
+	  ## User selection of UV Theme
 	  @user = User.current
       user_theme = @user.custom_value_for(CustomField.first(:conditions => {:name => 'Ultraviolet Theme'}))
       @uv_theme_name = user_theme || DEFAULT_UV_THEME
