@@ -1,14 +1,22 @@
 require 'redmine'
-require 'uv'
 
+require 'uv'
 require 'ultraviolet_syntax_patch'
 
 Redmine::Plugin.register :redmine_ultraviolet do
-  name 'Redmine Ultraviolet Syntax highlighting plugin'
-  author 'Chris Gahan, Andy Bailey'
-  description "Uses Textmate's syntaxes to highlight repository files."
-  version '0.0.3'
-  
-  ## When the plugin is initilized, create the Custom Field and populate it
-  UserCustomField.create(:name => 'Ultraviolet Theme', :is_required => true, :field_format => 'list', :default_value => 'cobalt', :possible_values => ['active4d','all_hallows_eve','amy','blackboard','brilliance_black','brilliance_dull','cobalt','dawn','eiffel','espresso_libre','idle','iplastic','lazy','mac_classic','magicwb_amiga','pastels_on_dark','slush_poppies','spacecadet','sunburst','twilight','zenburnesque'])  unless UserCustomField.find_by_name('Ultraviolet Theme')
+  name "Redmine Ultraviolet Syntax highlighting plugin"
+  author "Chris Gahan, Andy Bailey"
+  description "Uses Textmate's syntaxes highlighters to highlight files in the source code repository."
+  version "0.0.3"
+
+  # Create a dropdown list in the UI so the user can pick a theme.
+  unless UserCustomField.find_by_name('Ultraviolet Theme')
+    UserCustomField.create(
+      :name             => 'Ultraviolet Theme', 
+      :default_value    => Uv::DEFAULT_THEME, 
+      :possible_values  => Uv::THEMES,  # see ultraviolet_syntax_patch.rb
+      :field_format     => 'list',
+      :is_required      => true
+    )
+  end
 end

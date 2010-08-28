@@ -192,6 +192,7 @@ The field has been prepopulated with currently available themes.
 
 = License:
 
-Copyright (c) 2009 Chris Gahan.
+Copyright (c) 2009-2010 Chris Gahan
+Copyright (c) 2010 Andy Bailey
 
 Licensed under the WTFPL. See LICENSE for details.
