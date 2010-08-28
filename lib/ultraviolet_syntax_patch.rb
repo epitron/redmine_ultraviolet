@@ -60,11 +60,7 @@ module UltravioletSyntaxPatch
       
 	  @user = User.current
       user_theme = @user.custom_value_for(CustomField.first(:conditions => {:name => 'Ultraviolet Theme'}))
-      if user_theme !=nil
-        @uv_theme_name = user_theme
-      else # An existing user hasn't selected a theme yet
-        @uv_theme_name = DEFAULT_UV_THEME
-      end
+      @uv_theme_name = user_theme || DEFAULT_UV_THEME
 
       syntaxes = Uv.syntax_for_file(name, content)
 
