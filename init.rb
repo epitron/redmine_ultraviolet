@@ -10,13 +10,15 @@ Redmine::Plugin.register :redmine_ultraviolet do
   version "0.0.3"
 
   # Create a dropdown list in the UI so the user can pick a theme.
-  unless UserCustomField.find_by_name('Ultraviolet Theme')
-    UserCustomField.create(
-      :name             => 'Ultraviolet Theme', 
-      :default_value    => Uv::DEFAULT_THEME, 
-      :possible_values  => Uv::THEMES,  # see ultraviolet_syntax_patch.rb
-      :field_format     => 'list',
-      :is_required      => true
-    )
+  if UserCustomField.table_exists?
+    unless UserCustomField.find_by_name('Ultraviolet Theme')
+      UserCustomField.create(
+        :name             => 'Ultraviolet Theme', 
+        :default_value    => Uv::DEFAULT_THEME, 
+        :possible_values  => Uv::THEMES,  # see   ultraviolet_syntax_patch.rb
+        :field_format     => 'list',
+        :is_required      => true
+      )
+    end
   end
 end
