@@ -5,7 +5,7 @@ require 'ultraviolet_syntax_patch'
 
 Redmine::Plugin.register :redmine_ultraviolet do
   name "Redmine Ultraviolet Syntax highlighting plugin"
-  author "Chris Gahan, Andy Bailey"
+  author "Chris Gahan"
   description "Uses Textmate's syntaxes highlighters to highlight files in the source code repository."
   version "0.0.3"
 

@@ -191,7 +191,7 @@ Each user can change the colour scheme by going to "My account" and picking the 
 
 * Originally by Chris Gahan ({epitron}[http://github.com/epitron/]) (2009-2011)
 * Contributions by Andy Bailey ({neosonic}[http://github.com/neosonic/]) (2010)
-* Contributions by 2011 Daniel Exner ({DeX77}[http://github.com/epitron/DeX77]) (2011)
+* Contributions by Daniel Exner ({DeX77}[http://github.com/epitron/DeX77]) (2011)
 
 = License:
 
