@@ -10,7 +10,12 @@ language under the sun. And it has lots of themes!
 
 First, install Ultraviolet:
 
-  apt-get install libonig-dev
+  apt-get install libonig-dev 
+
+Or for OSX using HomeBrew:
+
+  brew install oniguruma
+
   gem install ultraviolet
 
 Next, use Rails' handy-dandy plugin installer to grab this plugin:
