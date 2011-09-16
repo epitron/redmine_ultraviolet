@@ -8,17 +8,28 @@ language under the sun. And it has lots of themes!
 
 = Installation:
 
-First, install Ultraviolet:
 
-  apt-get install libonig-dev
+First, install Oniguruma (advanced regular expression support):
+
+  Ubuntu/Debian:
+    apt-get install libonig-dev
+  
+  OSX (with Brew):
+    brew install oniguruma
+ 
+
+Next, install the Ultraviolet gem:
+
   gem install ultraviolet
 
-Next, use Rails' handy-dandy plugin installer to grab this plugin:
+
+And finally, use Rails' handy-dandy plugin installer to grab this plugin:
 
   script/plugin install git://github.com/epitron/redmine_ultraviolet.git
 
-Alternatively, you can just copy the <tt>redmine_ultraviolet</tt> directory into <tt>vendor/plugins/</tt>
 
+Alternatively, you can just get a copy of it and copy the <tt>redmine_ultraviolet</tt>
+directory into <tt>vendor/plugins/</tt>
 
 = Themes:
 
