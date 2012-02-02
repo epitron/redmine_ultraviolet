@@ -17,6 +17,8 @@ First, install Oniguruma (advanced regular expression support):
   OSX (with Brew):
     brew install oniguruma
  
+  Windows:
+    gem install oniguruma
 
 Next, install the Ultraviolet gem:
 
